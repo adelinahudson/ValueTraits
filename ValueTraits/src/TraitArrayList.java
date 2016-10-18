@@ -58,6 +58,7 @@ public class TraitArrayList
 		traits.add(new Trait("good-communication", 0));
 		traits.add(new Trait("chemistry", 0));
 		
+		//comment
 		
 		
 	
