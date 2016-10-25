@@ -2,9 +2,11 @@ import java.util.ArrayList;
 
 public class TraitArrayList
 	{
+
+	static ArrayList <Trait> traits = new ArrayList<Trait>();
 		public static void main(String[] args)
 			{
-		ArrayList <Trait> traits = new ArrayList<Trait>();
+
 		traits.add(new Trait("political party", 0));
 		traits.add(new Trait("eye color", 1));
 		traits.add(new Trait("hair color", 1));
@@ -57,6 +59,7 @@ public class TraitArrayList
 		traits.add(new Trait("good-fashion", 1));
 		traits.add(new Trait("good-communication", 0));
 		traits.add(new Trait("chemistry", 0));
+		traits.add(new Trait("affection", 0));
 		
 		//comment
 		
