@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Scanner;
 public class TraitRunner
 	{
-	static int gender;
+	static String genderType;
 	static ArrayList <Trait> traits = new ArrayList<Trait>();
 	static ArrayList <Trait> roundOne = new ArrayList<Trait>();
 	static ArrayList <Trait> roundTwo = new ArrayList<Trait>();
@@ -47,15 +47,17 @@ public class TraitRunner
 		{
 		Scanner userInput = new Scanner(System.in);
 		System.out.println("Are you looking for a guy or girl? Type 1 for guy. Type 2 for girl.");
-		gender = userInput.nextInt();
+		int gender = userInput.nextInt();
 		
 		if(gender==1)
 		{
 			System.out.println("I will help you find the best quality for you in a guy!");
+			genderType.equals("guy");
 		}
 		else if(gender==2)
 		{
 			System.out.println("I will help you find the best quality for you in a girl!");
+			genderType.equals("girl");
 		}
 		else
 		{
@@ -120,17 +122,13 @@ public class TraitRunner
 		}
 		public static void showAllTraitsBeingCompared()
 		{
-			
 			System.out.println();
 			System.out.println("These are all the traits being compared:");
-			
 			for(Trait t: traits)
 					{
 								System.out.println(t.getTrait());
 					}
-
 			System.out.println();
-			
 		}
 		public static void shuffleTraits()
 		{
@@ -142,8 +140,7 @@ public class TraitRunner
 		}
 		public static void askQuestionsBeginningRound()
 		{
-			
-			for(int i = 0; i < traits.size(); i++)
+			for(int i = 0; i < 26; i++)
 			{
 				Scanner userInput = new Scanner(System.in);			
 				System.out.println("Choose which one is more important. Type 1 or 2. ");
@@ -157,7 +154,6 @@ public class TraitRunner
 					{
 						counter++;
 					}
-			
 				}
 				else if (answer == 2)
 				{
@@ -173,15 +169,12 @@ public class TraitRunner
 				}
 				traits.remove(0);
 				traits.remove(0);
-			
 			}
-
 			System.out.println("NEXT ROUND");
 		}
-		
 			public static void roundOne()
 			{
-				for(int i = 2; i <= roundOne.size(); i++)
+				for(int i = 0; i < 13; i++)
 				{
 					Scanner userInput = new Scanner(System.in);			
 					System.out.println("Choose which one is more important. Type 1 or 2. ");
@@ -195,7 +188,6 @@ public class TraitRunner
 						{
 							counter++;
 						}
-				
 					}
 					else if (answer == 2)
 					{
@@ -212,13 +204,11 @@ public class TraitRunner
 					roundOne.remove(0);
 					roundOne.remove(0);
 				}
-
 				System.out.println("NEXT ROUND");
 			}
-			
 			public static void roundTwo()
 			{
-				for(int i = 2; i <= roundTwo.size(); i++)
+				for(int i = 0; i < 6; i++)
 				{
 					Scanner userInput = new Scanner(System.in);			
 					System.out.println("Choose which one is more important. Type 1 or 2. ");
@@ -232,7 +222,6 @@ public class TraitRunner
 						{
 							counter++;
 						}
-				
 					}
 					else if (answer == 2)
 					{
@@ -253,8 +242,7 @@ public class TraitRunner
 				System.out.println("NEXT ROUND");
 			}
 			public static void roundThree()
-			{
-				for(int i = 2; i <= roundThree.size(); i++)
+			{ for(int i = 0; i < 3; i++)
 				{
 					Scanner userInput = new Scanner(System.in);			
 					System.out.println("Choose which one is more important. Type 1 or 2. ");
@@ -268,7 +256,6 @@ public class TraitRunner
 						{
 							counter++;
 						}
-				
 					}
 					else if (answer == 2)
 					{
@@ -290,7 +277,7 @@ public class TraitRunner
 			}
 			public static void roundFour()
 			{
-				for(int i = 0; i <= roundFour.size(); i++)
+				for(int i = 0; i < 2; i++)
 				{
 					Scanner userInput = new Scanner(System.in);			
 					System.out.println("Choose which one is more important. Type 1 or 2. ");
@@ -304,7 +291,6 @@ public class TraitRunner
 						{
 							counter++;
 						}
-				
 					}
 					else if (answer == 2)
 					{
@@ -321,13 +307,11 @@ public class TraitRunner
 					roundFour.remove(0);
 					roundFour.remove(0);
 				}
-
 				System.out.println("NEXT ROUND");
 			}
-	
 			public static void roundFive()
 			{
-				for(int i = 0; i <= roundFive.size(); i++)
+				for(int i = 0; i < 1; i++)
 				{
 					Scanner userInput = new Scanner(System.in);			
 					System.out.println("Choose which one is more important. Type 1 or 2. ");
@@ -341,7 +325,6 @@ public class TraitRunner
 						{
 							counter++;
 						}
-				
 					}
 					else if (answer == 2)
 					{
@@ -358,14 +341,9 @@ public class TraitRunner
 					roundFive.remove(0);
 					roundFive.remove(0);
 				}
-			
-
 			}
-			
 			public static void declareWinner()
 			{
-				System.out.println("The most important quality you look for in a " + gender + " is ");
+				System.out.println("The most important quality you look for in a " + genderType + " is " + roundSix.get(0).getTrait());
 			}
-			
 	}
-	
