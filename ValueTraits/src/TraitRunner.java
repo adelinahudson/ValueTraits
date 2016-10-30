@@ -11,8 +11,9 @@ public class TraitRunner
 	static ArrayList <Trait> roundFour = new ArrayList<Trait>();
 	static ArrayList <Trait> roundFive = new ArrayList<Trait>();
 	static ArrayList <Trait> roundSix = new ArrayList<Trait>();
-	
 	static int counter = 0;
+	static int tot = 209;
+	
 		public static void main(String[] args)
 			{
 				declareSuperficialityModifierCounter();
@@ -29,7 +30,11 @@ public class TraitRunner
 				roundFour();
 				roundFive();
 				declareWinner();
-			}
+				superficialModifier(counter);
+				System.out.println("On the superficial scale... you are " + counter + "/209 superficial.");
+				total(tot);
+				
+		
 		public static void declareSuperficialityModifierCounter()
 		{
 			// counter is declared above with static
@@ -346,4 +351,22 @@ public class TraitRunner
 			{
 				System.out.println("The most important quality you look for in a " + genderType + " is " + roundSix.get(0).getTrait());
 			}
+			
+			public static int superficialModifier(int counter)
+			{
+				return counter;
+			}
+			
+			public static int total(int tot)
+			{
+				return tot;
+			}
+//			
+//			public static int precentage(int percentage)
+//			{
+//			
+//				return percentage;
+//				
+//			}
+			
 	}
