@@ -3,7 +3,6 @@ import java.util.Collections;
 import java.util.Scanner;
 public class TraitRunner
 	{
-	static String genderType;
 	static ArrayList <Trait> traits = new ArrayList<Trait>();
 	static ArrayList <Trait> roundOne = new ArrayList<Trait>();
 	static ArrayList <Trait> roundTwo = new ArrayList<Trait>();
@@ -32,9 +31,8 @@ public class TraitRunner
 				declareWinner();
 				superficialModifier(counter);
 				System.out.println("On the superficial scale... you are " + counter + "/209 superficial.");
-				total(tot);
-				
-		
+				total(counter, tot);
+			}
 		public static void declareSuperficialityModifierCounter()
 		{
 			// counter is declared above with static
@@ -57,12 +55,12 @@ public class TraitRunner
 		if(gender==1)
 		{
 			System.out.println("I will help you find the best quality for you in a guy!");
-			genderType.equals("guy");
+			
 		}
 		else if(gender==2)
 		{
 			System.out.println("I will help you find the best quality for you in a girl!");
-			genderType.equals("girl");
+		
 		}
 		else
 		{
@@ -349,7 +347,7 @@ public class TraitRunner
 			}
 			public static void declareWinner()
 			{
-				System.out.println("The most important quality you look for in a " + genderType + " is " + roundSix.get(0).getTrait());
+				System.out.println("The most important quality you look for in a girl/guy is " + roundSix.get(0).getTrait());
 			}
 			
 			public static int superficialModifier(int counter)
@@ -357,10 +355,17 @@ public class TraitRunner
 				return counter;
 			}
 			
-			public static int total(int tot)
+			public static void total(int counter, int tot)
 			{
-				return tot;
+				
+				if (counter==tot)
+					{
+						System.out.println("You are 100% superficial.");
+					}
+				
 			}
+			
+			
 //			
 //			public static int precentage(int percentage)
 //			{
